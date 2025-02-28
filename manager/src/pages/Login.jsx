@@ -24,7 +24,10 @@ const Login = () => {
 
             const response = await axios.post(
                 "https://localhost:7183/api/auth/login",
-                formData,
+                {
+                    email: formData.email,
+                    password: formData.password, // Sending only email and password
+                },
                 {
                     headers: {
                         "Content-Type": "application/json",
@@ -34,7 +37,9 @@ const Login = () => {
 
             setSuccess(response.data.message);
             console.log("Login Successful:", response.data);
-            setFormData({ email: "", password: "" }); // Reset form
+
+            // Reset form
+            setFormData({ email: "", password: "" });
 
         } catch (error) {
             if (error.response) {

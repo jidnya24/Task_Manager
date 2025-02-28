@@ -1,6 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Models;
+using TaskManager.DTOs; // Import DTO namespace
+using System.Threading.Tasks;
 
 namespace TaskManager.Controllers
 {
@@ -9,6 +11,7 @@ namespace TaskManager.Controllers
     public class AuthController : ControllerBase
     {
         private readonly task_managerContext _context;
+
         public AuthController(task_managerContext context)
         {
             _context = context;
@@ -35,14 +38,14 @@ namespace TaskManager.Controllers
 
         // User Login
         [HttpPost("login")]
-        public async Task<IActionResult> Login([FromBody] User loginUser)
+        public async Task<IActionResult> Login([FromBody] LoginRequestDTO loginRequest)
         {
             // Validate input
-            if (loginUser == null || string.IsNullOrEmpty(loginUser.Email) || string.IsNullOrEmpty(loginUser.Password))
+            if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Email) || string.IsNullOrEmpty(loginRequest.Password))
                 return BadRequest(new { message = "Invalid input data" });
 
             // Check if user exists with matching email and password
-            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginUser.Email && u.Password == loginUser.Password);
+            var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginRequest.Email && u.Password == loginRequest.Password);
 
             if (user == null)
                 return Unauthorized(new { message = "Invalid Credentials!" });

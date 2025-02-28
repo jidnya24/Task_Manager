@@ -47,3 +47,4 @@ C:\Users\HP\Downloads\TaskManager\TaskManager\TaskManager\obj\Debug\net6.0\refin
 C:\Users\HP\Downloads\TaskManager\TaskManager\TaskManager\obj\Debug\net6.0\TaskManager.pdb
 C:\Users\HP\Downloads\TaskManager\TaskManager\TaskManager\obj\Debug\net6.0\TaskManager.genruntimeconfig.cache
 C:\Users\HP\Downloads\TaskManager\TaskManager\TaskManager\obj\Debug\net6.0\ref\TaskManager.dll
+C:\Users\HP\Downloads\TaskManager\TaskManager\TaskManager\obj\Debug\net6.0\TaskManager.sourcelink.json

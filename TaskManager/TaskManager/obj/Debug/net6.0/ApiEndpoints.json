@@ -8,8 +8,8 @@
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginUser",
-        "Type": "TaskManager.Models.User",
+        "Name": "loginRequest",
+        "Type": "TaskManager.DTOs.LoginRequestDTO",
         "IsRequired": true
       }
     ],

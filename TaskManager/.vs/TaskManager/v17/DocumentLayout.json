@@ -7,6 +7,10 @@
       "RelativeMoniker": "D:0:0:{1425A8D0-8887-4A0D-B5FB-93E2AAB5ECB7}|TaskManager\\TaskManager.csproj|solutionrelative:taskmanager\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
+      "AbsoluteMoniker": "D:0:0:{1425A8D0-8887-4A0D-B5FB-93E2AAB5ECB7}|TaskManager\\TaskManager.csproj|c:\\users\\hp\\downloads\\taskmanager\\taskmanager\\taskmanager\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1425A8D0-8887-4A0D-B5FB-93E2AAB5ECB7}|TaskManager\\TaskManager.csproj|solutionrelative:taskmanager\\dtos\\loginrequestdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{1425A8D0-8887-4A0D-B5FB-93E2AAB5ECB7}|TaskManager\\TaskManager.csproj|c:\\users\\hp\\downloads\\taskmanager\\taskmanager\\taskmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1425A8D0-8887-4A0D-B5FB-93E2AAB5ECB7}|TaskManager\\TaskManager.csproj|solutionrelative:taskmanager\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -38,7 +42,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 9,
           "Children": [
             {
               "$type": "Bookmark",
@@ -54,7 +58,20 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "LoginRequestDTO.cs",
+              "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\DTOs\\LoginRequestDTO.cs",
+              "RelativeDocumentMoniker": "TaskManager\\DTOs\\LoginRequestDTO.cs",
+              "ToolTip": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\DTOs\\LoginRequestDTO.cs",
+              "RelativeToolTip": "TaskManager\\DTOs\\LoginRequestDTO.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-28T15:46:24.7Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "TaskManager\\Properties\\launchSettings.json",
@@ -62,24 +79,22 @@
               "RelativeToolTip": "TaskManager\\Properties\\launchSettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAUAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-28T07:47:45.963Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T07:47:45.963Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
               "Title": "TaskManager",
               "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\TaskManager.csproj",
               "RelativeDocumentMoniker": "TaskManager\\TaskManager.csproj",
               "ToolTip": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\TaskManager.csproj",
               "RelativeToolTip": "TaskManager\\TaskManager.csproj",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-02-28T07:47:45.283Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T07:47:45.283Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\Program.cs",
               "RelativeDocumentMoniker": "TaskManager\\Program.cs",
@@ -87,12 +102,11 @@
               "RelativeToolTip": "TaskManager\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T07:47:38.449Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T07:47:38.449Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\appsettings.json",
               "RelativeDocumentMoniker": "TaskManager\\appsettings.json",
@@ -100,12 +114,11 @@
               "RelativeToolTip": "TaskManager\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-02-28T07:47:31.757Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T07:47:31.757Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "User.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\Models\\User.cs",
               "RelativeDocumentMoniker": "TaskManager\\Models\\User.cs",
@@ -113,8 +126,7 @@
               "RelativeToolTip": "TaskManager\\Models\\User.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T07:35:40.367Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T07:35:40.367Z"
             },
             {
               "$type": "Document",
@@ -124,14 +136,14 @@
               "RelativeDocumentMoniker": "TaskManager\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\Controllers\\AuthController.cs",
               "RelativeToolTip": "TaskManager\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADgAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-28T07:35:24.908Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "task_managerContext.cs",
               "DocumentMoniker": "C:\\Users\\HP\\Downloads\\TaskManager\\TaskManager\\TaskManager\\Models\\task_managerContext.cs",
               "RelativeDocumentMoniker": "TaskManager\\Models\\task_managerContext.cs",
@@ -139,8 +151,7 @@
               "RelativeToolTip": "TaskManager\\Models\\task_managerContext.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAGoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-28T07:33:44.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-02-28T07:33:44.144Z"
             }
           ]
         }
