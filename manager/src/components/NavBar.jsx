@@ -1,6 +1,8 @@
 import React, { useState } from "react";
-import { AppBar, Toolbar, Box, Button, IconButton, Drawer, MenuItem } from "@mui/material";
+import { AppBar, Toolbar, Box, IconButton, Drawer } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -13,9 +15,9 @@ export default function Navbar() {
     <AppBar 
       position="fixed" 
       sx={{ 
-        backgroundColor: "transparent",  // ✅ Ensures full transparency
-        boxShadow: "none",               // ✅ Removes any shadow
-        backdropFilter: "none"           // ✅ Prevents background blur effect
+        backgroundColor: "transparent",
+        boxShadow: "none",
+        backdropFilter: "none"
       }}
     >
       <Toolbar sx={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
@@ -26,25 +28,34 @@ export default function Navbar() {
 
         {/* Right: Sign In/Sign Up */}
         <Box sx={{ display: { xs: "none", md: "flex" }, gap: 1 }}>
-          <Button 
-            variant="outlined" 
-            sx={{ 
-              color: "#a52a2a", 
-              borderColor: "#a52a2a", 
-              "&:hover": { borderColor: "#8b1e1e", backgroundColor: "#f4e1d2" } 
-            }}
-          >
-            Sign In
-          </Button>
-          <Button 
-            variant="contained" 
-            sx={{ 
-              backgroundColor: "#a52a2a", 
-              "&:hover": { backgroundColor: "#8b1e1e" } 
-            }}
-          >
-            Sign Up
-          </Button>
+          <Link to="/signin" style={{ textDecoration: 'none' }}>
+            <Button 
+              variant="outlined" 
+              sx={{ 
+                borderRadius: "50px",  // Fully rounded
+                padding: "10px 24px",
+                color: "#a52a2a", 
+                borderColor: "#a52a2a", 
+                "&:hover": { borderColor: "#8b1e1e", backgroundColor: "#f4e1d2" } 
+              }}
+            >
+              Sign In
+            </Button>
+          </Link>
+          <Link to="/signup" style={{ textDecoration: 'none' }}>
+            <Button 
+              variant="outlined"  // Now outlined instead of contained
+              sx={{ 
+                borderRadius: "50px",
+                padding: "10px 24px",
+                color: "#a52a2a", 
+                borderColor: "#a52a2a", 
+                "&:hover": { borderColor: "#8b1e1e", backgroundColor: "#f4e1d2" } 
+              }}
+            >
+              Sign Up
+            </Button>
+          </Link>
         </Box>
 
         {/* Mobile Menu Icon */}
@@ -55,35 +66,37 @@ export default function Navbar() {
         {/* Mobile Drawer Menu */}
         <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
           <Box sx={{ width: 250, p: 2 }}>
-            <MenuItem onClick={toggleDrawer(false)}>Home</MenuItem>
-            <MenuItem onClick={toggleDrawer(false)}>Features</MenuItem>
-            <MenuItem onClick={toggleDrawer(false)}>Pricing</MenuItem>
-            <MenuItem onClick={toggleDrawer(false)}>Contact</MenuItem>
-            <MenuItem>
+            <Link to="/signin" style={{ textDecoration: 'none', width: '100%' }}>
               <Button 
-                fullWidth 
                 variant="outlined" 
                 sx={{ 
-                  color: "#a52a2a", 
-                  borderColor: "#a52a2a", 
-                  "&:hover": { borderColor: "#8b1e1e", backgroundColor: "#f4e1d2" } 
+                  borderRadius: "50px",  // Fully rounded
+                  padding: "14px 30px",  // Adjust padding (increase first value for height)
+                  height: "55px",  // Explicitly set height
+                  color: "#a52a2a",  
+                  borderColor: "#a52a2a",  
+                  "&:hover": { borderColor: "#8b1e1e", backgroundColor: "#f4e1d2" }  
                 }}
+                
               >
                 Sign In
               </Button>
-            </MenuItem>
-            <MenuItem>
+            </Link>
+            <Link to="/signup" style={{ textDecoration: 'none', width: '100%' }}>
               <Button 
-                fullWidth 
-                variant="contained" 
+                fullWidth
+                variant="outlined"  // Now outlined instead of contained
                 sx={{ 
-                  backgroundColor: "#a52a2a", 
-                  "&:hover": { backgroundColor: "#8b1e1e" } 
+                  borderRadius: "50px",
+                  padding: "10px 24px",
+                  color: "#a52a2a", 
+                  borderColor: "#a52a2a", 
+                  "&:hover": { borderColor: "#8b1e1e", backgroundColor: "#f4e1d2" }  
                 }}
               >
                 Sign Up
               </Button>
-            </MenuItem>
+            </Link>
           </Box>
         </Drawer>
       </Toolbar>

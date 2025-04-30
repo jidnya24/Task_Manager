@@ -3,6 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TaskManager.Models;
 using TaskManager.DTOs; // Import DTO namespace
 using System.Threading.Tasks;
+using TaskManager.Services;
 
 namespace TaskManager.Controllers
 {
@@ -11,44 +12,45 @@ namespace TaskManager.Controllers
     public class AuthController : ControllerBase
     {
         private readonly task_managerContext _context;
+        private readonly EmailService _emailService;
 
-        public AuthController(task_managerContext context)
+        // ✅ Corrected Constructor
+        public AuthController(task_managerContext context, EmailService emailService)
         {
             _context = context;
+            _emailService = emailService;
         }
 
-        // User Registration
+        // ✅ User Registration without Password Hashing
         [HttpPost("register")]
         public async Task<IActionResult> Register([FromBody] User user)
         {
-            // Validate request
             if (user == null || string.IsNullOrEmpty(user.Email) || string.IsNullOrEmpty(user.Password))
                 return BadRequest(new { message = "Invalid input data" });
 
-            // Check if user already exists
             if (await _context.Users.AnyAsync(u => u.Email == user.Email))
                 return BadRequest(new { message = "User already exists!" });
 
-            // Save user directly without hashing password
             _context.Users.Add(user);
             await _context.SaveChangesAsync();
 
             return Ok(new { message = "User registered successfully!" });
         }
 
-        // User Login
+        // ✅ User Login with Email Notification
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginRequestDTO loginRequest)
         {
-            // Validate input
             if (loginRequest == null || string.IsNullOrEmpty(loginRequest.Email) || string.IsNullOrEmpty(loginRequest.Password))
                 return BadRequest(new { message = "Invalid input data" });
 
-            // Check if user exists with matching email and password
             var user = await _context.Users.FirstOrDefaultAsync(u => u.Email == loginRequest.Email && u.Password == loginRequest.Password);
 
             if (user == null)
                 return Unauthorized(new { message = "Invalid Credentials!" });
+
+            // 🔹 Send email notification on successful login
+            await _emailService.SendLoginEmail(loginRequest.Email, user.Uname);
 
             return Ok(new { message = "Login Successful!", userId = user.UserId });
         }

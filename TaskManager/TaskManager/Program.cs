@@ -1,5 +1,6 @@
 using Microsoft.EntityFrameworkCore;
 using TaskManager.Models;
+using TaskManager.Services;
 
 namespace TaskManager
 {
@@ -8,6 +9,7 @@ namespace TaskManager
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            builder.Services.AddScoped<EmailService>();
 
             // Add Database Context
             builder.Services.AddDbContext<task_managerContext>(options =>

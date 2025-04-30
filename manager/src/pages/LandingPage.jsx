@@ -6,12 +6,7 @@ const LandingPage = () => {
         <Box sx={{ height: "100vh", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", bgcolor: "#f5f5f5" }}>
             {/* Navbar */}
             <Box sx={{ position: "absolute", top: 0, right: 0, p: 2 }}>
-                <Button component={Link} to="/login" variant="contained" sx={{ mr: 2 }}>
-                    Login
-                </Button>
-                <Button component={Link} to="/register" variant="outlined">
-                    Register
-                </Button>
+               
             </Box>
 
             {/* Main Content */}
